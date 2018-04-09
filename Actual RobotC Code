@@ -11,45 +11,42 @@
 
 task main()
 {
-
+	//ClawSpeed=speed of claw
 	//declare constants
-	int CLAW_SPEED = 127;
+	int ClawSpeed = 127;
 	int variable = 10;
 
 	//create variables
-	int leftSpeed = 0;
-	int rightSpeed = 0;
-	int armSpeed = 0;
-	int openClaw = 0;
-	int closeClaw = 0;
+	int left = 0;
+	int right = 0;
+	int arm = 0;
 
 
-	//drive
 
 	while(true)
 	{
-		//set variables
-		leftSpeed = vexRT[Ch3];
-		rightSpeed = vexRT[Ch2];
+		//set variables equal to channels on controllers
+		left = vexRT[Ch3];
+		right = vexRT[Ch2];
 
 
-		if (abs(leftSpeed) < variable)
+		if (abs(left) < variable)
 		{
-			leftSpeed = 0;
+			left = 0;
 		}
 
 
-		if (abs(rightSpeed) < variable)
+		if (abs(right) < variable)
 		{
-			rightSpeed = 0;
+			right = 0;
 		}
 
 		//Represents code to drive robot
 
 		//Have to enter code to move the arm, not completed yet
-		if (abs(armSpeed) < variable)
+		if (abs(arm) < variable)
 		{
-			armSpeed = 0;
+			arm = 0;
 		}
 
 		//have to enter code to move the claw, not completed yet
