@@ -14,7 +14,7 @@ task main()
 
 	//declare constants
 	int CLAW_SPEED = 127;
-	int DEADBAND = 10;
+	int variable = 10;
 
 	//create variables
 	int leftSpeed = 0;
@@ -31,57 +31,25 @@ task main()
 		//set variables
 		leftSpeed = vexRT[Ch3];
 		rightSpeed = vexRT[Ch2];
-		armSpeed = vexRT[Ch3Xmtr2];
-		openClaw = vexRT[Btn5UXmtr2];
-		closeClaw = vexRT[Btn5DXmtr2];
 
 
-		//1st controller
-
-
-		//left deadband
-		if (abs(leftSpeed) < DEADBAND)
+		if (abs(leftSpeed) < variable)
 		{
 			leftSpeed = 0;
 		}
 
-		// right deadband
-		if (abs(rightSpeed) < DEADBAND)
+
+		if (abs(rightSpeed) < variable)
 		{
 			rightSpeed = 0;
 		}
 
-		//drive robot
-		drive(leftSpeed, rightSpeed);
+		//Represents code to drive robot
 
-
-		//2nd controller
-
-
-		//move arm
-
-		//deadband
-		if (abs(armSpeed) < DEADBAND)
+		//Have to enter code to move the arm, not completed yet
+		if (abs(armSpeed) < variable)
 		{
 			armSpeed = 0;
 		}
 
-		setArm(armSpeed);
-
-		//move claw
-
-		if(openClaw == 1) // open claw with button 5U
-		{
-			setClaw(CLAW_SPEED);
-		}
-		else if(closeClaw == 1) //close claw with button 5D
-		{
-			setClaw(-CLAW_SPEED);
-		}
-		else
-		{
-			stopClaw();
-		}
-	}
-
-}
+		//have to enter code to move the claw, not completed yet
