@@ -37,10 +37,10 @@ task main()
 		//orient the code with their associated channels
 		left_speed = vexRT[Ch3];
 		right_speed = vexRT[Ch2];
-		open_claw = vexRT[Btn5U];
-		close_claw = vexRT[Btn5D];
-		lift_arm = vexRT[Btn6U];
-		lower_arm = vexRT[Btn6D];
+		open_claw = vexRT[Btn6U];
+		close_claw = vexRT[Btn5U];
+		lift_arm = vexRT[Btn6D];
+		lower_arm = vexRT[Btn5D];
 
 		//to move the left side
 		if (abs(left_speed) < x)
@@ -90,3 +90,6 @@ task main()
 	}
 
 }
+
+//Team B code
+//Contributers: 
